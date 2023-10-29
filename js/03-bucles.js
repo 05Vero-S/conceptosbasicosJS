@@ -40,3 +40,14 @@ do{
     contador = contador - 1; //contador-- decrementa solo en 1
 }
 while(contador >= 1)
+
+//For
+/*
+for(inicializo una variable; condicion logica; incremento o decremento de la variable){
+    todas las lineas de codigo que quiero repetir varias veces
+   }
+*/
+
+for(let renglon =1; renglon <=10; renglon = renglon + 1){
+    document.write(`<p>Renglon número ${renglon} con for</p>`);
+}
