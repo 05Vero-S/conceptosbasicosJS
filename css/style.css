@@ -2,3 +2,11 @@
 .titulo{
     color:chocolate;
 }
+
+table, td{
+    border: 1px solid aqua;
+}
+
+td{
+    padding: 10px;
+}
