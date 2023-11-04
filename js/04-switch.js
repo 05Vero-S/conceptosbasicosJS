@@ -43,6 +43,9 @@ const opcion = parseInt(
 //Estructura switch usamos cuando tenemos muchos if anidados y cuando tengamos un ejercicio que parece un menu.que parece una lista de opciones
 
 switch (opcion) {
+    //case 'saldo':
+    //case 'consultar saldo': estas opciones tmb son validas puedo poner varias opciones que ejecutan la misma opcion
+    //case '1':
   case 1:
     console.log("Saldo disponible: " + saldo);
     document.write("Saldo disponible: " + saldo + "<br>");
