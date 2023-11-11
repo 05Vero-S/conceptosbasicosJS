@@ -60,3 +60,41 @@ for(let i= 0; i<juegos.length; i++){
     document.write(`<li>${juegos[i]}</li>`);
 }
 document.write(`</ul>`);
+
+//eliminar elementos de un array
+juegos.shift(); //elimina el primer elemento del array
+document.write(`<h2>Lista de juegos -1 elemento del array (${juegos.length})</h2>`);
+document.write(`<ul>`);
+for(let i= 0; i<juegos.length; i++){
+    document.write(`<li>${juegos[i]}</li>`);
+}
+document.write(`</ul>`);
+
+//eliminar un elemento del medio de mi array
+juegos.splice(3,1);
+document.write(`<h2>Lista de juegos -1 elemento del array (${juegos.length})</h2>`);
+document.write(`<ul>`);
+for(let i= 0; i<juegos.length; i++){
+    document.write(`<li>${juegos[i]}</li>`);
+}
+document.write(`</ul>`);
+
+//borrar de a varios elementos
+/*juegos.splice(3,3);
+document.write(`<h2>Lista de juegos -3 elemento del array (${juegos.length})</h2>`);
+document.write(`<ul>`);
+for(let i= 0; i<juegos.length; i++){
+    document.write(`<li>${juegos[i]}</li>`);
+}
+document.write(`</ul>`);*/
+
+//para borrar todo el array sería array.splice(0);
+
+//eliminar el ultimo elemento del array POP
+juegos.pop();
+document.write(`<h2>Lista de juegos -1 elemento del array (${juegos.length})</h2>`);
+document.write(`<ul>`);
+for(let i= 0; i<juegos.length; i++){
+    document.write(`<li>${juegos[i]}</li>`);
+}
+document.write(`</ul>`);
