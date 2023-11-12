@@ -15,7 +15,7 @@ function saludoNuevo(nombreIngresado, apellidoIngresado){
     return resultado; //nada despues del return
 }*/
 
-//arrow functions
+//arrow functions tienen q ir arriba por las dudas para que no falle.
 const sumar = (numero1, numero2) =>{
     const resultado=numero1 + numero2;
     console.log(resultado);
