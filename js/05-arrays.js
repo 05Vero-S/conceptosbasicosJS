@@ -118,3 +118,15 @@ for(let i= 0; i<juegos.length; i++){
     document.write(`<li>${juegos[i]}</li>`);
 }
 document.write(`</ul>`);*/
+
+juegos.push('Mortal Kombat 1','Mortal Kombat 2','Mortal Kombat 3','Mortal Kombat 1')
+mostrarJuegos('Agregamos nuevos jueguitos');
+
+//Para filtrar elemntos de un array. FILTER metodo inmutable (no modifica al array) me retorna un nuevo arreglo
+console.log(juegos[8]);
+console.log(juegos[8].includes('Kombat')); //includes me devuelve true o false.
+
+//const juegosMKT = juegos.filter((juego) => juego === 'Mortal Kombat 1') //necesito como argumento funciones anonimas
+const juegosMKT = juegos.filter((juego) => juego.includes('Kombat'))
+console.log(juegosMKT);
+ //si la condicion de filter no se cumple siempre me devuelve un array vacio [].
