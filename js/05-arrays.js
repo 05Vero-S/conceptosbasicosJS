@@ -177,3 +177,4 @@ const respuesta = (juegoBuscado2 !== undefined)? juegoBuscado2 : 'No se encontr√
 document.write(`<p>Juego buscado: ${respuesta}</p>`);
 
 //si tengo varios mismos elementos. find no. Solo nos devuelve UNO.
+// find index. me devuelve un numero.la posicion
