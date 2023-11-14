@@ -153,7 +153,27 @@ console.log(juegos[8].includes("Kombat")); //includes me devuelve true o false.
 //const juegosMKT = juegos.filter((juego) => juego === 'Mortal Kombat 1') //necesito como argumento funciones anonimas
 const juegosMKT = juegos.filter((juego) => juego.includes("Kombat"));
 console.log(juegosMKT);
-//si la condicion de filter no se cumple siempre me devuelve un array vacio [].
+//si la condicion de filter no se cumple siempre me devuelve un array vacio []. 
 
 
 mostrarArray(juegosMKT,'Familia de juegos de MKT');
+
+//FIND se lo utiliza para encontrar solo un elemento dentro del array. si no lo encuentra al elemento que estoy buscando me devuelve indefinido (undefined)
+
+const juegoBuscado = juegos.find(itemJuego => itemJuego.includes('Minecraft'));
+const juegoBuscado2 = juegos.find(itemJuego => itemJuego.includes('PES'));
+
+document.write(`<p>Juego buscado: ${juegoBuscado}</p>`);
+/*if (juegoBuscado2 !== undefined{
+    document.write(`<p>Juego buscado: ${juegoBuscado2} </p>`);
+}else{
+    document.write(`<p>Juego buscado: No se encontró el juego buscado</p>`);
+}) */
+
+//OPERADOR TERNARIO
+// (condicion logica)? toda la logica si se cumple la condicion :(seria el else)la logica si no se cumple la condicion
+//al resultado del ternario lo puedo guardar en una variable
+const respuesta = (juegoBuscado2 !== undefined)? juegoBuscado2 : 'No se encontró el termino buscado';
+document.write(`<p>Juego buscado: ${respuesta}</p>`);
+
+//si tengo varios mismos elementos. find no. Solo nos devuelve UNO.
