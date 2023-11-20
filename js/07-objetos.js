@@ -13,9 +13,11 @@ const usuario = {
     password: '1235Ab@',
     //metodos: nombre del metodo (lo invento en este caso login)
     login: function (){
-        document.write(`<p>El usuario inicio sesión</p>`);
+        console.log(this);
+        document.write(`<p>El usuario ${this.nombre}, inicio sesión</p>`);  //this dentro de una funcion declarativa funciona (devuelve mi objeto). Fuera del objeto vale otra cosa(objeto que representa la ventana del navegador, no es mi objeto)
     },
     logout: () =>{
+        console.log(this); //devuelve windows no deja acceder a mi objeto la funcion flecha.
         document.write(`<p>El usuario cerró sesión</p>`);
     }
 }
@@ -39,3 +41,16 @@ document.write(`<p>Perfil: ${usuario.perfil}</p>`);
 console.log(usuario);
 
 document.write(`<p>Nombre: ${usuario.Nombre}</p>`); //discrimina entre mayusculas y minusculas. entonces aparece undefined.(prpiedad q no tenemos en ese momentos o mal la sintaxis(mal escritas))
+
+//para borrar una propiedad de un objeto, usamos DELETE obejto.propiedad;
+delete usuario.perfil;
+console.log(usuario);
+
+//metodo para saber si mi objeto tiene una propiedad(metodo heredado)
+
+console.log(usuario.hasOwnProperty('edad')) //nos devuelve un booleano.
+
+//los metodos internamente estan llamando una funcion
+//invocar un metodo del objeto (objeto.metodo()) lo puedo invocar las veces que yo quiera. 
+usuario.login(); //muestra en pantalla el usuario incio sesion
+usuario.logout(); //muestra en pantalla el usuario cerro sesion
